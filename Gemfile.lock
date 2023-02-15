@@ -90,6 +90,8 @@ GEM
       irb (>= 1.5.0)
       reline (>= 0.3.1)
     erubi (1.12.0)
+    faker (3.1.1)
+      i18n (>= 1.8.11, < 2)
     globalid (1.1.0)
       activesupport (>= 5.0)
     i18n (1.12.0)
@@ -115,6 +117,15 @@ GEM
     method_source (1.0.0)
     mini_mime (1.1.2)
     minitest (5.17.0)
+    monetize (1.12.0)
+      money (~> 6.12)
+    money (6.16.0)
+      i18n (>= 0.6.4, <= 2)
+    money-rails (1.15.0)
+      activesupport (>= 3.0)
+      monetize (~> 1.9)
+      money (~> 6.13)
+      railties (>= 3.0)
     msgpack (1.6.0)
     net-imap (0.3.4)
       date
@@ -128,6 +139,7 @@ GEM
     nio4r (2.5.8)
     nokogiri (1.14.2-x86_64-darwin)
       racc (~> 1.4)
+    pagy (6.0.1)
     pg (1.4.5)
     public_suffix (5.0.1)
     puma (5.6.5)
@@ -190,6 +202,10 @@ GEM
       railties (>= 6.0.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
+    view_component (2.82.0)
+      activesupport (>= 5.2.0, < 8.0)
+      concurrent-ruby (~> 1.0)
+      method_source (~> 1.0)
     web-console (4.2.0)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -215,8 +231,11 @@ DEPENDENCIES
   capybara
   cssbundling-rails
   debug
+  faker
   jbuilder
   jsbundling-rails
+  money-rails (~> 1.12)
+  pagy (~> 6.0)
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.4, >= 7.0.4.2)
@@ -226,6 +245,7 @@ DEPENDENCIES
   stimulus-rails
   turbo-rails
   tzinfo-data
+  view_component
   web-console
   webdrivers
 

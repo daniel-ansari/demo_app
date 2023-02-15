@@ -73,3 +73,8 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+gem 'money-rails', '~>1.12'
+gem 'faker'
+gem 'pagy', '~> 6.0'
+gem 'view_component'

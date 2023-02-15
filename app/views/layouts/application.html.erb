@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" class="">
   <head>
     <title>DemoApp</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -10,7 +10,17 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
-  <body>
-    <%= yield %>
+  <body class="bg-gray-50 dark:bg-gray-800">
+    <%= turbo_frame_tag "modal", class: "fixed top-0 right-0 z-40 w-full h-screen max-w-xs p-4 overflow-y-auto transition-transform bg-white dark:bg-gray-800 translate-x-full" %>
+    <div class="flex pt-16 overflow-hidden bg-gray-50 dark:bg-gray-900">
+      <div id="main-content" class="relative w-full max-w-screen-2xl mx-auto h-full overflow-y-auto bg-gray-50 dark:bg-gray-900">
+        <main>
+          <div class="px-4 pt-6 2xl:px-0">
+          <%= yield %>
+          </div>
+        </main>
+      </div>
+    </div>
+    <div id='modal-bg' class="bg-gray-900 bg-opacity-50 dark:bg-opacity-80 fixed inset-0 z-30 hidden"></div>
   </body>
 </html>
